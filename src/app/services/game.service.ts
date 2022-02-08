@@ -17,10 +17,10 @@ export class GameService {
   getNominados() {
 
     if( this.games.length > 0 ) {
-      console.log('Desde caché');      
+      // console.log('Desde caché');      
       return of(this.games)
     }else {
-      console.log('Desde Internet');
+      // console.log('Desde Internet');
       return this.http.get<Game[]>(`${ environment.url }/api/goty`)
         .pipe(
           tap(
@@ -28,5 +28,9 @@ export class GameService {
           )
         )
     }
+  }
+
+  votarGame( id: string ) {
+    return this.http.post(`${ environment.url }/api/goty/${ id }`,{});
   }
 }

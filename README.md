@@ -24,3 +24,6 @@ npm install -g firebase-tools
 
 ## Generate game service
 ng g s services/game
+
+## Install Sweet Alert 2
+npm install sweetalert2
