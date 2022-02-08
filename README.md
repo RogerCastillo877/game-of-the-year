@@ -13,3 +13,14 @@ npm i @swimlane/ngx-charts --save
 Solve problems with:
 * npm i --save-dev @types/d3-selection
 * npm install @angular/cdk --save
+
+## Config Firebase
+npm install -g firebase-tools
+* firebase login
+* firebase init
+* firebase serve
+
+* firebase deploy
+
+## Generate game service
+ng g s services/game
