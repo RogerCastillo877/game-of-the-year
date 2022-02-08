@@ -29,7 +29,9 @@ export class GotyComponent implements OnInit {
       .subscribe( (resp: any) => {
         if( resp.ok ) {
           Swal.fire('Gracias', resp.msg, 'success')
-        }    
+        } else {
+          Swal.fire('Opps', resp.msg, 'error')
+        }
       });
   }
 
