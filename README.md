@@ -30,3 +30,9 @@ npm install sweetalert2
 
 ## Install AngularFire [https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md]
 ng add @angular/fire
+
+## Set up to production
+ng build
+
+### App URL
+https://games-votes-graphic.web.app
