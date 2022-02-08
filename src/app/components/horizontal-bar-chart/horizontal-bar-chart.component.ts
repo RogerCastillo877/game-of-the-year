@@ -1,30 +1,31 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-horizontal-bar-chart',
   templateUrl: './horizontal-bar-chart.component.html',
   styleUrls: ['./horizontal-bar-chart.component.css']
 })
-export class HorizontalBarChartComponent implements OnDestroy {
+export class HorizontalBarChartComponent {
 
-  results: any[] = [
-    {
-      "name": "Juego1",
-      "value": 20
-    },
-    {
-      "name": "Juego2",
-      "value": 24
-    },
-    {
-      "name": "Juego3",
-      "value": 30
-    },
-    {
-      "name": "Juego4",
-      "value": 10
-    }
-  ];
+  @Input() results: any[] = [];
+  // results: any[] = [
+  //   {
+  //     "name": "Juego1",
+  //     "value": 20
+  //   },
+  //   {
+  //     "name": "Juego2",
+  //     "value": 24
+  //   },
+  //   {
+  //     "name": "Juego3",
+  //     "value": 30
+  //   },
+  //   {
+  //     "name": "Juego4",
+  //     "value": 10
+  //   }
+  // ];
 
 
   // options
@@ -39,26 +40,22 @@ export class HorizontalBarChartComponent implements OnDestroy {
 
   colorScheme = 'nightLights';
 
-  interval;
+  // interval;
 
   constructor() {
 
-    this.interval = setInterval( () => {
+    // this.interval = setInterval( () => {
 
-      const newResults = [...this.results];
+    //   const newResults = [...this.results];
 
-      for( let i in newResults ) {
-        newResults[0].value = Math.round(Math.random()*500);
-      }
-      this.results = [...newResults];
-      }, 1500);
+    //   for( let i in newResults ) {
+    //     newResults[0].value = Math.round(Math.random()*500);
+    //   }
+    //   this.results = [...newResults];
+    //   }, 1500);
   }
   
   onSelect() {
     console.log();
-  }
-  
-  ngOnDestroy(): void {
-    clearInterval( this.interval );
   }
 }

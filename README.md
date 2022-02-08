@@ -27,3 +27,6 @@ ng g s services/game
 
 ## Install Sweet Alert 2
 npm install sweetalert2
+
+## Install AngularFire [https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md]
+ng add @angular/fire
